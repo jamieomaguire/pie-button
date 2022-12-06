@@ -1,0 +1,12 @@
+{
+  "name": "pie-button",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "author": "Jamie Maguire",
+  "license": "MIT",
+  "dependencies": {
+    "lit": "^2.4.1"
+  }
+}
