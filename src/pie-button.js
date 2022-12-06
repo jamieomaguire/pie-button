@@ -1,4 +1,6 @@
-export class MyElement extends LitElement {
+import { LitElement, css, html } from 'lit';
+
+export class PieButton extends LitElement {
     static get styles() {
       return css`
         :host {
