@@ -1,12 +1,24 @@
 {
-  "name": "pie-button",
+  "name": "@jamieomaguire/pie-button",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
-  "module": "index.js",
+  "main": "dist/bundle.js",
+  "module": "dist/bundle.js",
+  "files": [
+    "dist"
+  ],
   "author": "Jamie Maguire",
   "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
   "dependencies": {
     "lit": "^2.4.1"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.1.0",
+    "rollup": "^2.36.2",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }
