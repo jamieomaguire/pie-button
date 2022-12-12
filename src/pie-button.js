@@ -26,7 +26,13 @@ export class PieButton extends LitElement {
          * The size of button to show
          * @type {string}
          */
-        size: {type: String}
+        size: {type: String},
+
+        /**
+         * Should the button be disabled
+         * @type {boolean}
+         */
+        disabled: {type: Boolean}
       };
     }
   
@@ -36,7 +42,11 @@ export class PieButton extends LitElement {
     }
   
     render() {
-      return html`<button @click=${this._onClick} class="o-btn o-btn--${this.type} o-btn--size${this.size}">
+      return html`
+      <button
+        @click=${this._onClick}
+        ?disabled=${this.disabled}
+        class="o-btn o-btn--${this.type} o-btn--size${this.size}">
         <slot></slot>
         Click Count: ${this.count}
       </button>`
