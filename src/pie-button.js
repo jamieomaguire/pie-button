@@ -11,29 +11,32 @@ export class PieButton extends LitElement {
     static get properties() {
       return {
         /**
-         * The name to say "Hello" to.
-         * @type {string}
-         */
-        name: {type: String},
-  
-        /**
          * The number of times the button has been clicked.
          * @type {number}
          */
         count: {type: Number},
 
-        type: {type: String}
+        /**
+         * The type of button to show
+         * @type {string}
+         */
+        type: {type: String},
+
+        /**
+         * The size of button to show
+         * @type {string}
+         */
+        size: {type: String}
       };
     }
   
     constructor() {
       super();
-      this.name = 'World';
       this.count = 0;
     }
   
     render() {
-      return html`<button @click=${this._onClick} class="o-btn o-btn--${this.type}">
+      return html`<button @click=${this._onClick} class="o-btn o-btn--${this.type} o-btn--size${this.size}">
         <slot></slot>
         Click Count: ${this.count}
       </button>`

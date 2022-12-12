@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <div style="display: flex; gap: 1em; flex-wrap: wrap; padding: 1em 2em;">
-        <pie-button type="primary">Button 1</pie-button>
-        <pie-button type="secondary">Button 2</pie-button>
-        <pie-button type="outline">Button 3</pie-button>
-        <pie-button type="ghost">Button 4</pie-button>
-    </div>
 
+<body>
+    <div style="display: flex; flex-direction: column; gap: 2em;">
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; padding: 1em 2em;">    
+            <pie-button size="Large" type="primary">Button 1</pie-button>
+            <pie-button size="Large" type="secondary">Button 2</pie-button>
+            <pie-button size="Large" type="outline">Button 3</pie-button>
+            <pie-button size="Large" type="ghost">Button 4</pie-button>
+        </div>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; padding: 1em 2em;">
+            <pie-button size="Small" type="primary">Button 1</pie-button>
+            <pie-button size="Small" type="secondary">Button 2</pie-button>
+            <pie-button size="Small" type="outline">Button 3</pie-button>
+            <pie-button size="Small" type="ghost">Button 4</pie-button>
+        </div>
+        <div style="display: flex; gap: 1em; flex-wrap: wrap; padding: 1em 2em;">
+            <pie-button size="XSmall" type="primary">Button 1</pie-button>
+            <pie-button size="XSmall" type="secondary">Button 2</pie-button>
+            <pie-button size="XSmall" type="outline">Button 3</pie-button>
+            <pie-button size="XSmall" type="ghost">Button 4</pie-button>
+        </div>
+    </div>
     <script type="module" src="./dist/bundle.js"></script>
 </body>
+
 </html>
