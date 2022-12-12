@@ -10,15 +10,19 @@
   "author": "Jamie Maguire",
   "license": "MIT",
   "scripts": {
-    "build": "rollup -c"
+    "build": "yarn build:css && yarn create:js:styles && rollup -c",
+    "build:css": "sass --load-path=node_modules ./src/style.scss ./src/generated/style.css",
+    "create:js:styles": "node createCssJsModule.js"
   },
   "dependencies": {
+    "@justeat/fozzie": "^10.10.3",
     "lit": "^2.4.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
     "@rollup/plugin-node-resolve": "^11.1.0",
     "rollup": "^2.36.2",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.56.2"
   }
 }

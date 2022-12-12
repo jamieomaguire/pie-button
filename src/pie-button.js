@@ -1,15 +1,11 @@
-import { LitElement, css, html } from 'lit';
+import { LitElement, css, html, unsafeCSS } from 'lit';
+import { styles } from './generated/style';
+
+const styleString = styles();
 
 export class PieButton extends LitElement {
     static get styles() {
-      return css`
-        :host {
-          display: block;
-          border: solid 1px gray;
-          padding: 16px;
-          max-width: 800px;
-        }
-      `;
+      return css`${unsafeCSS(styleString)}`;
     }
   
     static get properties() {
@@ -25,6 +21,8 @@ export class PieButton extends LitElement {
          * @type {number}
          */
         count: {type: Number},
+
+        type: {type: String}
       };
     }
   
@@ -35,13 +33,10 @@ export class PieButton extends LitElement {
     }
   
     render() {
-      return html`
-        <h1>${this.sayHello(this.name)}!</h1>
-        <button @click=${this._onClick} part="button">
-          Click Count: ${this.count}
-        </button>
+      return html`<button @click=${this._onClick} class="o-btn o-btn--${this.type}">
         <slot></slot>
-      `;
+        Click Count: ${this.count}
+      </button>`
     }
   
     _onClick() {
