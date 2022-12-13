@@ -4,9 +4,9 @@ This is a total work in progress.
 
 Currently the design is:
 
-- define the WC in the `pie-button.js` file
+- define the WC in the `pie-button.ts` file
 - write any styles in `style.scss`
-- there is an import to a `style.js` file inside the `generated` folder. This is deliberately empty and is populated when you run the `build` script `yarn build`.
+- there is an import to a `style.ts` file inside the `generated` folder. This is deliberately empty and is populated when you run the `build` script `yarn build`.
 - This script will transform the scss into a css file, then transform that into a javascript module that exports the compiled css as a string.
 - This can then be imported by the web component using Lit's `css` function.
 
