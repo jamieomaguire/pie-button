@@ -7,7 +7,7 @@ import { terser } from 'rollup-plugin-terser';
 const production = !process.env.ROLLUP_WATCH;
 
 export default {
-	input: 'src/pie-button.js',
+	input: 'generated/pie-button.js',
 	output: {
 		file: 'dist/bundle.js',
 		format: 'iife', // immediately-invoked function expression — suitable for <script> tags
