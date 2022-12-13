@@ -49,7 +49,6 @@ export class PieButton extends LitElement {
     }
 }
 
-// customElements.define('pie-button', PieButton);
 declare global {
   interface HTMLElementTagNameMap {
     'pie-button': PieButton;
