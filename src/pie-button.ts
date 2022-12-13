@@ -1,6 +1,6 @@
 import { LitElement, css, html, unsafeCSS } from 'lit';
 import { styles } from './generated/style';
-import {customElement, property} from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 
 const styleString = styles();
 

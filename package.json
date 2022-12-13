@@ -10,10 +10,10 @@
   "author": "Jamie Maguire",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build:css && yarn create:js:styles && yarn compile && rollup -c",
-    "build:css": "sass --load-path=node_modules ./src/style.scss ./src/generated/style.css",
+    "build": "yarn build:css && yarn build:styles && yarn compile && rollup -c",
+    "build:css": "sass --load-path=node_modules ./src/style.scss ./src/generated/css/style.css",
     "compile": "npx tsc",
-    "create:js:styles": "node createCssTsModule.js"
+    "build:styles": "node createCssTsModule.js"
   },
   "dependencies": {
     "@justeat/fozzie": "^10.10.3",
